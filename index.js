@@ -58,7 +58,7 @@ app.get('/', (req, res) => {
   `);
 });
 
-const PORT =  3012;
+const PORT =  process.env.PORT||8080;
 app.listen(PORT, '127.0.0.1', () => {
   console.log(`✅ MCP Server is running on http://localhost:${PORT}`);
 }).on('error', (err) => {
